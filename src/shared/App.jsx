@@ -1,24 +1,26 @@
 import React from 'react'
 import Header from './Header'
-import About from './About'
-import Home from './Home'
-import { Switch, Route, BrowserRouter as Router, StaticRouter } from 'react-router-dom'
+// import About from './About'
+// import Home from './Home'
+// import { Switch, Route, StaticRouter } from 'react-router-dom'
+import { matchRoutes, renderRoutes } from "react-router-config";
+import routes from './Routes'
 const App = () => {
 
   return (
     <div>
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/about">
-            <About />
-          </Route>
-        </Switch>
-      </Router>
+      <Header></Header>
+      {renderRoutes(routes)}
+
     </div>
   )
 }
 export default App
+{/* <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/about">
+          <About />
+        </Route>
+      </Switch> */}
