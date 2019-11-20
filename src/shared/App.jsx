@@ -7,7 +7,7 @@ const App = () => {
 
   return (
     <div>
-      <StaticRouter>
+      <Router>
         <Header></Header>
         <Switch>
           <Route exact path="/">
@@ -17,7 +17,7 @@ const App = () => {
             <About />
           </Route>
         </Switch>
-      </StaticRouter>
+      </Router>
     </div>
   )
 }
