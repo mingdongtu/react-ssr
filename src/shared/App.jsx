@@ -6,12 +6,10 @@ import Header from './Header'
 import { matchRoutes, renderRoutes } from "react-router-config";
 import routes from './Routes'
 const App = () => {
-
   return (
     <div>
       <Header></Header>
       {renderRoutes(routes)}
-
     </div>
   )
 }
