@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
 
 const state = {
-  data: 'empty'
+  data: 'I am empty'
 }
 function reducer(initState = state, action) {
   switch (action.type) {
@@ -12,7 +12,7 @@ function reducer(initState = state, action) {
   }
 }
 export function createClientStore() {
-  return createStore(reducer,window.REDUX_DATA)
+  return createStore(reducer, window.REDUX_DATA)
 }
 export function createServerStore() {
   return createStore(reducer)

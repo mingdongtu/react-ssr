@@ -18,7 +18,6 @@ app.get(['/', '/about', '/home'], (req, res) => {  //监听这几个路由
 
   const store = createServerStore()
   matchedRouters.forEach(item => {
-    console.log('routes!!!!!!!!!', item)
     if (item.route.loadData) {
       promises.push(new Promise(resolve => {
         item.route.loadData(store).then(resolve)
