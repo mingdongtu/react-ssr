@@ -26,7 +26,6 @@ class About extends React.Component {
 }
 About.loadData = (store) => {
   return Axios.get('http://localhost:3001/getData').then(res => {
-    console.log('come in here!', res)
     store.dispatch({
       type: 'CHANGE_DATA',
       payload: res.data.data
@@ -38,7 +37,7 @@ function mapStateToProps(state) {
     data: state.data
   }
 }
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch) { //绑定到组件about上，听过this.props
   return {
     changeData(data) {
       dispatch({

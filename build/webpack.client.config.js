@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack');
-
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 module.exports = {
   mode: 'development',
   entry: './src/client/index.js',
@@ -8,13 +8,15 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve('./dist/public/')
   },
+
   devServer: {
     contentBase: './../dist',
     hot: true
   },
   plugins: [
     new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new UglifyJsPlugin()
   ],
   module: {
     rules: [

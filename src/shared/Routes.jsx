@@ -12,6 +12,11 @@ const routes = [
     path: '/about',
     component: About,
     loadData: About.loadData
+  },
+  {
+    path: '/about/abc',
+    component: About,
+    loadData: About.loadData
   }
 ]
 export default routes

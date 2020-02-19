@@ -3,7 +3,7 @@ import Header from './Header'
 // import About from './About'
 // import Home from './Home'
 // import { Switch, Route, StaticRouter } from 'react-router-dom'
-import { matchRoutes, renderRoutes } from "react-router-config";
+import { renderRoutes } from "react-router-config";
 import routes from './Routes'
 const App = () => {
   return (
